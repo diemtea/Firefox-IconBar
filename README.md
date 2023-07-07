@@ -9,7 +9,7 @@
 ## How to create/edit userChrome.css
 1. Open Firefox, and in your url bar type **about:profiles**
    
-3. Look for the Profile that says _This is the profile in use ..._ and click the **Open Folder** of the **Root Directory** section
+3. Look for the Profile that says _"This is the profile in use ..."_ and click the **Open Folder** of the **Root Directory** section
    
 5. Open the **chrome** folder (create it if it doesn't exists)
    
