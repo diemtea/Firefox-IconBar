@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "IconBar",
   "version": "1.0",
-  "description": "A Firefox extension for icon bookmarks, similar to Edge's sidebar.",
+  "description": "Sidebar with icon bookmarks, similar to Edge's sidebar.",
   "icons": {
     "48": "icon.png"
   },
