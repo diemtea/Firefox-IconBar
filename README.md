@@ -7,11 +7,15 @@
  NOTE: In order to have the thin sidebar, you need to create/edit your _userChrome.css_ file.
 
 ## How to create/edit userChrome.css
-1. Open Firefox, and in your url bar type **about:profiles** 
-2. Look for the Profile that says _This is the profile in use ..._ and click the **Open Folder** of the **Root Directory** section
-3. Open the **chrome** folder (create it if it doesn't exists)
-4. Open **userChrome.css** or (create it if it doesn't exists)
-5. Add the following code:
+1. Open Firefox, and in your url bar type **about:profiles**
+   
+3. Look for the Profile that says _This is the profile in use ..._ and click the **Open Folder** of the **Root Directory** section
+   
+5. Open the **chrome** folder (create it if it doesn't exists)
+   
+7. Open **userChrome.css** or (create it if it doesn't exists)
+   
+9. Add the following code:
 ```
 /* remove maximum/minimum width restriction of sidebar */
 #sidebar-box {
@@ -39,4 +43,5 @@
   display: none !important;
 }
 ```
+
 6. Restart Firefox
