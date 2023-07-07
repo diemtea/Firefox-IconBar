@@ -1,5 +1,5 @@
 # Firefox-IconBar
- A Firefox extension for icon bookmarks, similar to Edge's sidebar.
+ A Firefox extension for icon bookmarks, similar to Edge's sidebar. Will look for bookmarks in the folder: **Other Bookmarks > IconsBar**
 
  
  [https://addons.mozilla.org/en-US/firefox/addon/iconbar/](https://addons.mozilla.org/en-US/firefox/addon/iconbar/)
