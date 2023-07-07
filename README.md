@@ -34,7 +34,6 @@
 }
 
 #sidebar-box:not([sidebarcommand="viewBookmarksSidebar"]):not([sidebarcommand="viewHistorySidebar"]):not([sidebarcommand="viewTabsSidebar"]) #sidebar-header:not(:hover) #sidebar-switcher-target {
-  /* BAD NEWS: display: none !important; */
   opacity: 0 !important;
 }
 
