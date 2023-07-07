@@ -24,11 +24,15 @@ function showBookmarks() {
           var favicon = document.createElement('img');
           favicon.src = "https://www.google.com/s2/favicons?sz=64&domain_url=" + bookmark.url;
           favicon.alt = "Favicon";
-          favicon.style.width = '25px';
-          favicon.style.height = '25px';
+          favicon.style.width = '20px';
+          favicon.style.height = '20px';
           bookmarkLink.appendChild(favicon);
 
           listItem.appendChild(bookmarkLink);
+
+          // Show bookmark title on hover
+          listItem.title = bookmark.title;
+
           sidebar.appendChild(listItem);
         });
       } else {
@@ -53,6 +57,7 @@ function addBookmark() {
     };
     chrome.bookmarks.create(bookmarkData, function (bookmark) {
       console.log('Bookmark added:', bookmark);
+      showBookmarks(); // Update the bookmarks immediately
     });
   });
 }

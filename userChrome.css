@@ -1,5 +1,25 @@
 /* remove maximum/minimum width restriction of sidebar */
-#sidebar {
-  max-width: none !important;
-  min-width: 0px !important;
+#sidebar-box {
+  max-width: 60px !important;
+  min-width: 60px !important;
+  width: 60px !important;
+}
+
+/* Minimize sidebar header to a light blue stripe (except Bookmarks, History, Sync'd Tabs); appears normally on hover */
+#sidebar-box:not([sidebarcommand="viewBookmarksSidebar"]):not([sidebarcommand="viewHistorySidebar"]):not([sidebarcommand="viewTabsSidebar"]) #sidebar-header:not(:hover) {
+  max-height: 5px !important;
+  min-height: 5px !important;
+  padding: 0 !important;
+  background-color: #7ad !important;
+  opacity: 0.5 !important;
+}
+
+#sidebar-box:not([sidebarcommand="viewBookmarksSidebar"]):not([sidebarcommand="viewHistorySidebar"]):not([sidebarcommand="viewTabsSidebar"]) #sidebar-header:not(:hover) #sidebar-switcher-target {
+  /* BAD NEWS: display: none !important; */
+  opacity: 0 !important;
+}
+
+/* #sidebar-box[sidebarcommand="yourExtensionId"] .sidebar-header .close-icon { */
+#sidebar-box .sidebar-header .close-icon {
+  display: none !important;
 }
