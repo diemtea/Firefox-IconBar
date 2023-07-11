@@ -13,7 +13,7 @@
    
 5. Open the **chrome** folder (create it if it doesn't exists)
    
-7. Open **userChrome.css** or (create it if it doesn't exists)
+7. Open **userChrome.css** inside the **chrome** folder (create it if it doesn't exists)
    
 9. Add the following code:
 ```
