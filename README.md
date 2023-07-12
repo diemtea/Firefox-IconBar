@@ -18,28 +18,21 @@
 9. Add the following code:
 ```
 /* remove maximum/minimum width restriction of sidebar */
-#sidebar-box {
+#sidebar-box:is([sidebarcommand="_9dba9848-1289-4662-ac96-487a72c7e9fe_-sidebar-action"]) {
   max-width: 60px !important;
   min-width: 60px !important;
   width: 60px !important;
 }
-
 /* Minimize sidebar header to a light blue stripe (except Bookmarks, History, Sync'd Tabs); appears normally on hover */
-#sidebar-box:not([sidebarcommand="viewBookmarksSidebar"]):not([sidebarcommand="viewHistorySidebar"]):not([sidebarcommand="viewTabsSidebar"]) #sidebar-header:not(:hover) {
+#sidebar-box:is([sidebarcommand="_9dba9848-1289-4662-ac96-487a72c7e9fe_-sidebar-action"]) #sidebar-header:not(:hover) {
   max-height: 5px !important;
   min-height: 5px !important;
   padding: 0 !important;
   background-color: #7ad !important;
-  opacity: 0.5 !important;
+  opacity: 0.25 !important;
 }
-
-#sidebar-box:not([sidebarcommand="viewBookmarksSidebar"]):not([sidebarcommand="viewHistorySidebar"]):not([sidebarcommand="viewTabsSidebar"]) #sidebar-header:not(:hover) #sidebar-switcher-target {
+#sidebar-box:is([sidebarcommand="_9dba9848-1289-4662-ac96-487a72c7e9fe_-sidebar-action"]) #sidebar-header:not(:hover) #sidebar-switcher-target {
   opacity: 0 !important;
-}
-
-/* #sidebar-box[sidebarcommand="yourExtensionId"] .sidebar-header .close-icon { */
-#sidebar-box .sidebar-header .close-icon {
-  display: none !important;
 }
 ```
 
