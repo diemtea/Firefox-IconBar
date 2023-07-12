@@ -17,21 +17,23 @@
    
 9. Add the following code:
 ```
-/* remove maximum/minimum width restriction of sidebar */
+/* remove maximum/minimum width restriction of IconBar */
 #sidebar-box:is([sidebarcommand="_9dba9848-1289-4662-ac96-487a72c7e9fe_-sidebar-action"]) {
   max-width: 60px !important;
   min-width: 60px !important;
   width: 60px !important;
 }
-/* Minimize sidebar header to a light blue stripe (except Bookmarks, History, Sync'd Tabs); appears normally on hover */
-#sidebar-box:is([sidebarcommand="_9dba9848-1289-4662-ac96-487a72c7e9fe_-sidebar-action"]) #sidebar-header:not(:hover) {
-  max-height: 5px !important;
-  min-height: 5px !important;
+
+/* Minimize IconBar header */
+#sidebar-box:is([sidebarcommand="_9dba9848-1289-4662-ac96-487a72c7e9fe_-sidebar-action"]) #sidebar-header {
+  height: 0 !important;
   padding: 0 !important;
-  background-color: #7ad !important;
-  opacity: 0.25 !important;
+  margin: 0 !important;
+  opacity: 0 !important;
 }
-#sidebar-box:is([sidebarcommand="_9dba9848-1289-4662-ac96-487a72c7e9fe_-sidebar-action"]) #sidebar-header:not(:hover) #sidebar-switcher-target {
+
+/* Hide IconBar header */
+#sidebar-box:is([sidebarcommand="_9dba9848-1289-4662-ac96-487a72c7e9fe_-sidebar-action"]) #sidebar-header #sidebar-switcher-target {
   opacity: 0 !important;
 }
 ```
