@@ -1,4 +1,4 @@
-// Get the bookmarks from the "IconsBar" folder and display them in the sidebar
+// Get the bookmarks from the "IconBar" folder and display them in the sidebar
 function showBookmarks() {
   chrome.bookmarks.getTree(function (bookmarkTreeNodes) {
     var otherBookmarks = bookmarkTreeNodes[0].children.find(function (node) {
@@ -6,12 +6,12 @@ function showBookmarks() {
     });
 
     if (otherBookmarks) {
-      var iconsBarFolder = otherBookmarks.children.find(function (node) {
-        return node.title === "IconsBar";
+      var IconBarFolder = otherBookmarks.children.find(function (node) {
+        return node.title === "IconBar";
       });
 
-      if (iconsBarFolder) {
-        var bookmarks = iconsBarFolder.children;
+      if (IconBarFolder) {
+        var bookmarks = IconBarFolder.children;
         var sidebar = document.querySelector('.sidebar');
 
         sidebar.innerHTML = ''; // Clear previous content
@@ -22,7 +22,7 @@ function showBookmarks() {
           bookmarkLink.href = bookmark.url;
 
           var favicon = document.createElement('img');
-          favicon.src = "https://www.google.com/s2/favicons?sz=64&domain_url=" + bookmark.url;
+          favicon.src = "https://www.google.com/s2/favicons?sz=32&domain_url=" + bookmark.url;
           favicon.alt = "Favicon";
           favicon.style.width = '20px';
           favicon.style.height = '20px';
@@ -37,28 +37,12 @@ function showBookmarks() {
         });
       } else {
         var sidebar = document.querySelector('.sidebar');
-        sidebar.textContent = "IconsBar folder not found";
+        sidebar.textContent = "IconBar folder not found";
       }
     } else {
       var sidebar = document.querySelector('.sidebar');
       sidebar.textContent = "Other Bookmarks folder not found";
     }
-  });
-}
-
-// Add the active page as a bookmark to the "IconsBar" folder
-function addBookmark() {
-  chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
-    var activeTab = tabs[0];
-    var bookmarkData = {
-      parentId: "toolbar_____",
-      title: activeTab.title,
-      url: activeTab.url
-    };
-    chrome.bookmarks.create(bookmarkData, function (bookmark) {
-      console.log('Bookmark added:', bookmark);
-      showBookmarks(); // Update the bookmarks immediately
-    });
   });
 }
 

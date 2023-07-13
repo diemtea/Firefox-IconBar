@@ -5,7 +5,7 @@ body {
 
 li {
   list-style-type: none;
-  padding-bottom: 25px;
+  padding-bottom: 20px;
 }
 
 .sidebar {
@@ -19,7 +19,7 @@ li {
 
 .sidebar li {
   list-style: none;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   padding: 5px;
   border-radius: 7px;
   width: 40px;
@@ -27,6 +27,7 @@ li {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: all ease 0.25s
 }
 
 .sidebar li:hover {
