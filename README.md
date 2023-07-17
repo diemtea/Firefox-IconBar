@@ -1,10 +1,11 @@
 # Firefox-IconBar
  A Firefox extension for icon bookmarks, similar to Edge's sidebar. Will look for bookmarks in the folder: **Other Bookmarks > IconsBar**
+
  [https://addons.mozilla.org/en-US/firefox/addon/iconbar/](https://addons.mozilla.org/en-US/firefox/addon/iconbar/)
  
- ![alt text](https://addons.mozilla.org/user-media/previews/full/284/284649.png "IconBar Preview")
- 
  NOTE: In order to have the thin sidebar, you need to create/edit your _userChrome.css_ file.
+ 
+ ![alt text](https://addons.mozilla.org/user-media/previews/full/284/284859.png?modified=1689252696 "IconBar Preview")
 
 ## How to create/edit userChrome.css
 1. Open Firefox, and in your url bar type **about:profiles**
