@@ -3,6 +3,7 @@
   "name": "IconBar",
   "version": "1.0.2",
   "description": "Sidebar with icon bookmarks, similar to Edge's sidebar.",
+  "homepage_url": "https://github.com/diemtea/Firefox-IconBar",
   "icons": {
     "48": "icon.png"
   },
