@@ -39,4 +39,9 @@
 }
 ```
 
+10. Set Firefox to look for userChrome.css at startup:
+In a new tab, type or paste **about:config** in the address bar and press Enter/Return. Click the button accepting the risk.
+In the search box above the list, type or paste **userprof** and pause while the list is filtered.
+Double-click the **toolkit.legacyUserProfileCustomizations.stylesheets** preference to switch the value from false to **true**.
+
 6. Restart Firefox
