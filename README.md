@@ -10,13 +10,13 @@
 ## How to create/edit userChrome.css
 1. Open Firefox, and in your url bar type **about:profiles**
    
-3. Look for the Profile that says _"This is the profile in use and it cannot be deleted."_ and click the **Open Folder** of the **Root Directory** section
+2. Look for the Profile that says _"This is the profile in use and it cannot be deleted."_ and click the **Open Folder** of the **Root Directory** section
    
-5. Open the **chrome** folder (create it if it doesn't exists)
+3. Open the **chrome** folder (create it if it doesn't exists)
    
-7. Open **userChrome.css** inside the **chrome** folder (create it if it doesn't exists)
+4. Open **userChrome.css** inside the **chrome** folder (create it if it doesn't exists)
    
-9. Add the following code:
+5. Add the following code:
 ```
 /* remove maximum/minimum width restriction of IconBar */
 #sidebar-box:is([sidebarcommand="_9dba9848-1289-4662-ac96-487a72c7e9fe_-sidebar-action"]) {
@@ -39,9 +39,9 @@
 }
 ```
 
-10. Set Firefox to look for userChrome.css at startup:
+6. Set Firefox to look for userChrome.css at startup:
 In a new tab, type or paste **about:config** in the address bar and press Enter/Return. Click the button accepting the risk.
 In the search box above the list, type or paste **userprof** and pause while the list is filtered.
 Double-click the **toolkit.legacyUserProfileCustomizations.stylesheets** preference to switch the value from false to **true**.
 
-6. Restart Firefox
+7. Restart Firefox
