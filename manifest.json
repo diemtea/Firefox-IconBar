@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "IconBar",
-  "version": "1.0.2",
+  "version": "1.1",
   "description": "Sidebar with icon bookmarks, similar to Edge's sidebar.",
   "homepage_url": "https://github.com/diemtea/Firefox-IconBar",
   "icons": {
@@ -21,11 +21,18 @@
     "default_panel": "index.html"
   },
   "permissions": [
-    "bookmarks"
+    "bookmarks",
+    "contextMenus",
+    "storage"
   ],
   "web_accessible_resources": [
     "index.html",
     "sidebar.js",
     "style.css"
-  ]
+  ],
+  "content_security_policy": "script-src 'self'; object-src 'self'",
+  "background": {
+    "persistent": false,
+    "scripts": ["background.js"]
+  }
 }
