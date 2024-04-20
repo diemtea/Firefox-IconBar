@@ -22,7 +22,6 @@
   },
   "permissions": [
     "bookmarks",
-    "contextMenus",
     "storage"
   ],
   "web_accessible_resources": [
