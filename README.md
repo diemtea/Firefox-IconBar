@@ -5,7 +5,7 @@
  
  NOTE: In order to have the thin sidebar, you need to create/edit your _userChrome.css_ file.
  
- ![alt text](https://addons.mozilla.org/user-media/previews/full/284/284859.png?modified=1689252696 "IconBar Preview")
+ ![alt text](https://addons.mozilla.org/user-media/previews/full/314/314692.png?modified=1740251192)
 
 ## How to create/edit userChrome.css
 1. Open Firefox, and in your url bar type **about:profiles**
