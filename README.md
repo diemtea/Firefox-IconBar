@@ -1,12 +1,13 @@
 # Firefox IconBar
 ![IconBar logo](https://addons.mozilla.org/user-media/addon_icons/2805/2805366-64.png?modified=07715e9d)
- A Firefox extension for displaying bookmark icons in a sidebar that seamlessly matches your browser's theme. You can also upload your own icons to customize it further. Will look for bookmarks in the folder: **Other Bookmarks > IconsBar**
 
- [https://addons.mozilla.org/en-US/firefox/addon/iconbar/](https://addons.mozilla.org/en-US/firefox/addon/iconbar/)
+A Firefox extension for displaying bookmark icons in a sidebar that seamlessly matches your browser's theme. You can also upload your own icons to customize it further. Will look for bookmarks in the folder: **Other Bookmarks > IconsBar**
+
+[https://addons.mozilla.org/en-US/firefox/addon/iconbar/](https://addons.mozilla.org/en-US/firefox/addon/iconbar/)
  
- NOTE: In order to have the thin sidebar, you need to create/edit your _userChrome.css_ file.
+NOTE: In order to have the thin sidebar, you need to create/edit your _userChrome.css_ file.
  
- ![Screenshot highlighting IconBar sidebar](https://addons.mozilla.org/user-media/previews/full/314/314692.png?modified=1740251192)
+![Screenshot highlighting IconBar sidebar](https://addons.mozilla.org/user-media/previews/full/314/314692.png?modified=1740251192)
 
 ## How to create/edit userChrome.css
 1. Open Firefox, and in your url bar type **about:profiles**
