@@ -1,6 +1,5 @@
-html,
-body {
-  background-color: #1c1b22;
+.hidden {
+  display: none;
 }
 
 li {
@@ -10,26 +9,78 @@ li {
 
 .sidebar {
   width: 100vw;
-  color: #f2f2f2;
+  display: grid;
+  grid-template-columns: repeat(1, minmax(40px, auto)); /* Default 1 column */
+  gap: 8px; /* Space between items */
+  justify-items: center; /* Center items horizontally within each column */
   padding: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  box-sizing: border-box;
 }
 
+/* Apply styles to individual columns using nth-child */
 .sidebar li {
-  list-style: none;
-  margin-bottom: 20px;
-  padding: 5px;
-  border-radius: 7px;
   width: 40px;
   height: 40px;
+  margin: 0;
+  padding: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: all ease 0.25s
+  border-radius: 14px;
+  transition: all ease 0.25s;
+  flex-direction: column; /* Make buttons stack vertically */
+}
+
+.sidebar li button {
+  display: block; /* Make buttons block-level, stacking them vertically */
+  cursor: pointer;
+  width:50px;
+  text-align:center;  
+}
+
+/* Media Queries for specific breakpoints */
+@media (min-width: 60px) {
+  .sidebar {
+    grid-template-columns: repeat(1, minmax(40px, auto)); /* 1 column */
+  }
+}
+
+@media (min-width: 120px) {
+  .sidebar {
+    grid-template-columns: repeat(2, minmax(40px, auto)); /* 2 columns */
+  }
+}
+
+@media (min-width: 180px) {
+  .sidebar {
+    grid-template-columns: repeat(3, minmax(40px, auto)); /* 3 columns */
+  }
+}
+
+@media (min-width: 240px) {
+  .sidebar {
+    grid-template-columns: repeat(4, minmax(40px, auto)); /* 4 columns */
+  }
 }
 
 .sidebar li:hover {
-  background-color: #3b3948;
+  background-color:rgba(255, 255, 255, 0.15);
+}
+
+.btn {
+  -webkit-border-radius: 7;
+  -moz-border-radius: 7;
+  border-radius: 7px;
+  border-width: 0;
+  color: #f2f2f2;
+  background: #312f3b;
+  height:30px;
+  padding:0 20px;
+  text-decoration: none;
+  transition: all ease 0.25s
+}
+
+.btn:hover {
+  background:rgba(255, 255, 255, 0.15);
+  text-decoration: none;
 }
