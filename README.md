@@ -1,8 +1,10 @@
-# Firefox IconBar
+# IconBar
 
 ![IconBar logo](https://addons.mozilla.org/user-media/addon_icons/2805/2805366-64.png?modified=07715e9d)
 
-A Firefox extension for displaying bookmark icons in a sidebar that seamlessly matches your browser's theme. You can also upload your own icons to customize it further. The extension looks for bookmarks in the folder: **Other Bookmarks > IconBar**.
+[IconBar](https://addons.mozilla.org/en-US/firefox/addon/iconbar/) is a Firefox Extension for displaying bookmark icons in a sidebar that seamlessly matches your browser's theme. You can also upload your own icons to customize it further.
+
+The extension looks for bookmarks in the folder: `Other Bookmarks > IconBar`.
 
 ## Features
 
@@ -24,13 +26,13 @@ A Firefox extension for displaying bookmark icons in a sidebar that seamlessly m
 
 ## How to create/edit userChrome.css
 
-1. Open Firefox, and in your URL bar type **about\:profiles**.
+1. Open Firefox, and in your URL bar type `about:profiles`
 
-2. Find the profile labeled *“This is the profile in use and it cannot be deleted,”* then click **Open Folder** under **Root Directory**.
+2. Find the profile labeled `This is the profile in use and it cannot be deleted` then click **Open Folder** under `Root Directory`
 
-3. In that folder, open or create a **chrome** subfolder.
+3. In that folder, open or create a `chrome` subfolder
 
-4. Inside **chrome**, open or create **userChrome.css**.
+4. Inside **chrome**, open or create `userChrome.css`
 
 5. Add the following code:
 
@@ -58,8 +60,8 @@ A Firefox extension for displaying bookmark icons in a sidebar that seamlessly m
 
 6. Enable userChrome.css loading:
 
-   * In a new tab, go to **about\:config** and accept the risk.
-   * Search for **toolkit.legacyUserProfileCustomizations.stylesheets**.
-   * Double-click it to set the value to **true**.
+   * In a new tab, go to `about:config` and accept the risk
+   * Search for `toolkit.legacyUserProfileCustomizations.stylesheets`
+   * Double-click it to set the value to `true`
 
-7. Restart Firefox.
+7. Restart Firefox. Enjoy!
