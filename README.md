@@ -16,7 +16,7 @@ A Firefox extension for displaying bookmark icons in a sidebar that seamlessly m
 * **Custom Context Menu:** Right-click any icon to quickly Upload or Reset its image.
 * **Tooltips:** Hover an icon for 500 ms to see its bookmark title in a styled tooltip.
 
-[https://addons.mozilla.org/en-US/firefox/addon/iconbar/](https://addons.mozilla.org/en-US/firefox/addon/iconbar/)
+[Get this Addo-on for 🦊 Firefox](https://addons.mozilla.org/en-US/firefox/addon/iconbar/)
 
 > **Note:** To use the thin sidebar width, edit your *userChrome.css* file.
 
