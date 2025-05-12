@@ -1,49 +1,65 @@
 # Firefox IconBar
+
 ![IconBar logo](https://addons.mozilla.org/user-media/addon_icons/2805/2805366-64.png?modified=07715e9d)
 
-A Firefox extension for displaying bookmark icons in a sidebar that seamlessly matches your browser's theme. You can also upload your own icons to customize it further. Will look for bookmarks in the folder: **Other Bookmarks > IconsBar**
+A Firefox extension for displaying bookmark icons in a sidebar that seamlessly matches your browser's theme. You can also upload your own icons to customize it further. The extension looks for bookmarks in the folder: **Other Bookmarks > IconBar**.
+
+## Features
+
+* **Responsive Layout:** Adjusts the number of icon columns based on the sidebar’s width.
+* **Theme Sync:** Automatically matches the sidebar background to your Firefox theme and updates on theme changes.
+* **Live Updates:** Monitors bookmark creation, removal, and changes, refreshing the sidebar in real time.
+
+**New in v1.3:**
+
+* **Drag & Drop:** Reorder your bookmarks directly in the sidebar via drag-and-drop.
+* **Custom Context Menu:** Right-click any icon to quickly Upload or Reset its image.
+* **Tooltips:** Hover an icon for 500 ms to see its bookmark title in a styled tooltip.
 
 [https://addons.mozilla.org/en-US/firefox/addon/iconbar/](https://addons.mozilla.org/en-US/firefox/addon/iconbar/)
- 
-NOTE: In order to have the thin sidebar, you need to create/edit your _userChrome.css_ file.
- 
-![Screenshot highlighting IconBar sidebar](https://addons.mozilla.org/user-media/previews/full/314/314692.png?modified=1740251192)
+
+> **Note:** To use the thin sidebar width, edit your *userChrome.css* file.
+
+---
 
 ## How to create/edit userChrome.css
-1. Open Firefox, and in your url bar type **about:profiles**
-   
-2. Look for the Profile that says _"This is the profile in use and it cannot be deleted."_ and click the **Open Folder** of the **Root Directory** section
-   
-3. Open the **chrome** folder (create it if it doesn't exists)
-   
-4. Open **userChrome.css** inside the **chrome** folder (create it if it doesn't exists)
-   
+
+1. Open Firefox, and in your URL bar type **about\:profiles**.
+
+2. Find the profile labeled *“This is the profile in use and it cannot be deleted,”* then click **Open Folder** under **Root Directory**.
+
+3. In that folder, open or create a **chrome** subfolder.
+
+4. Inside **chrome**, open or create **userChrome.css**.
+
 5. Add the following code:
-```
-/* remove maximum/minimum width restriction of IconBar */
-#sidebar-box:is([sidebarcommand="_9dba9848-1289-4662-ac96-487a72c7e9fe_-sidebar-action"]) {
-  max-width: 60px !important;
-  min-width: 60px !important;
-  width: 60px !important;
-}
 
-/* Minimize IconBar header */
-#sidebar-box:is([sidebarcommand="_9dba9848-1289-4662-ac96-487a72c7e9fe_-sidebar-action"]) #sidebar-header {
-  height: 0 !important;
-  padding: 0 !important;
-  margin: 0 !important;
-  opacity: 0 !important;
-}
+   ```css
+   /* remove maximum/minimum width restriction of IconBar */
+   #sidebar-box:is([sidebarcommand="_9dba9848-1289-4662-ac96-487a72c7e9fe_-sidebar-action"]) {
+     max-width: 60px !important;
+     min-width: 60px !important;
+     width: 60px !important;
+   }
 
-/* Hide IconBar header */
-#sidebar-box:is([sidebarcommand="_9dba9848-1289-4662-ac96-487a72c7e9fe_-sidebar-action"]) #sidebar-header #sidebar-switcher-target {
-  opacity: 0 !important;
-}
-```
+   /* Minimize IconBar header */
+   #sidebar-box:is([sidebarcommand="_9dba9848-1289-4662-ac96-487a72c7e9fe_-sidebar-action"]) #sidebar-header {
+     height: 0 !important;
+     padding: 0 !important;
+     margin: 0 !important;
+     opacity: 0 !important;
+   }
 
-6. Set Firefox to look for userChrome.css at startup:
-In a new tab, type or paste **about:config** in the address bar and press Enter/Return. Click the button accepting the risk.
-In the search box above the list, type or paste **userprof** and pause while the list is filtered.
-Double-click the **toolkit.legacyUserProfileCustomizations.stylesheets** preference to switch the value from false to **true**.
+   /* Hide IconBar header */
+   #sidebar-box:is([sidebarcommand="_9dba9848-1289-4662-ac96-487a72c7e9fe_-sidebar-action"]) #sidebar-header #sidebar-switcher-target {
+     opacity: 0 !important;
+   }
+   ```
 
-7. Restart Firefox
+6. Enable userChrome.css loading:
+
+   * In a new tab, go to **about\:config** and accept the risk.
+   * Search for **toolkit.legacyUserProfileCustomizations.stylesheets**.
+   * Double-click it to set the value to **true**.
+
+7. Restart Firefox.

@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "IconBar",
-  "version": "1.2",
+  "version": "1.3",
   "description": "Sidebar with bookmark icons that matches your browser's theme.",
   "homepage_url": "https://github.com/diemtea/Firefox-IconBar",
   "icons": {

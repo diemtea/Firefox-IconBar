@@ -1,18 +1,24 @@
 <!DOCTYPE html>
 <html>
-
 <head>
+  <meta charset="utf-8">
+  <title>IconBar</title>
   <link rel="stylesheet" href="style.css">
   <style>
-    body {
-      width: 50px;
-    }
+    body { margin: 0; }
   </style>
-  <script src="sidebar.js"></script>
 </head>
-
 <body>
   <div class="sidebar"></div>
-</body>
 
+  <!-- In-page context menu -->
+  <div id="context-menu" class="hidden">
+    <button id="ctx-upload" class="btn">Upload</button>
+    <button id="ctx-reset"  class="btn">Reset</button>
+    <button id="ctx-delete" class="btn delete-btn">Delete</button>
+  </div>
+
+  <!-- Load your sidebar logic after the DOM -->
+  <script src="sidebar.js"></script>
+</body>
 </html>

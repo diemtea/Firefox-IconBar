@@ -1,86 +1,129 @@
+/* style.css */
+
+/* Prevent horizontal scroll and remove default page margins */
+html, body {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
 .hidden {
   display: none;
 }
 
 li {
   list-style-type: none;
-  padding-bottom: 20px;
+  margin: 0;
+  padding: 0;
 }
 
 .sidebar {
-  width: 100vw;
+  width: 100%; /* Full width of body (body is fixed to 50px in index.html) */
   display: grid;
-  grid-template-columns: repeat(1, minmax(40px, auto)); /* Default 1 column */
-  gap: 8px; /* Space between items */
-  justify-items: center; /* Center items horizontally within each column */
+  grid-template-columns: repeat(1, minmax(40px, auto));
+  gap: 8px;
+  justify-items: center;
   padding: 10px;
   box-sizing: border-box;
+  border:0px;
 }
 
-/* Apply styles to individual columns using nth-child */
+/* Responsive columns */
+@media (min-width: 60px)  { .sidebar { grid-template-columns: repeat(1, minmax(40px, auto)); } }
+@media (min-width: 120px) { .sidebar { grid-template-columns: repeat(2, minmax(40px, auto)); } }
+@media (min-width: 180px) { .sidebar { grid-template-columns: repeat(3, minmax(40px, auto)); } }
+@media (min-width: 240px) { .sidebar { grid-template-columns: repeat(4, minmax(40px, auto)); } }
+
 .sidebar li {
   width: 40px;
   height: 40px;
-  margin: 0;
   padding: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   border-radius: 14px;
-  transition: all ease 0.25s;
-  flex-direction: column; /* Make buttons stack vertically */
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  position: relative;
 }
 
-.sidebar li button {
-  display: block; /* Make buttons block-level, stacking them vertically */
-  cursor: pointer;
-  width:50px;
-  text-align:center;  
-}
-
-/* Media Queries for specific breakpoints */
-@media (min-width: 60px) {
-  .sidebar {
-    grid-template-columns: repeat(1, minmax(40px, auto)); /* 1 column */
-  }
-}
-
-@media (min-width: 120px) {
-  .sidebar {
-    grid-template-columns: repeat(2, minmax(40px, auto)); /* 2 columns */
-  }
-}
-
-@media (min-width: 180px) {
-  .sidebar {
-    grid-template-columns: repeat(3, minmax(40px, auto)); /* 3 columns */
-  }
-}
-
-@media (min-width: 240px) {
-  .sidebar {
-    grid-template-columns: repeat(4, minmax(40px, auto)); /* 4 columns */
-  }
+/* Drag-and-drop visual feedback */
+.sidebar li.drag-over {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: scale(1.1);
 }
 
 .sidebar li:hover {
-  background-color:rgba(255, 255, 255, 0.15);
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.sidebar li button {
+  display: block;
+  cursor: pointer;
+  width: 100%; /* Stretch to li width */
+  text-align: center;
+  box-sizing: border-box;
 }
 
 .btn {
-  -webkit-border-radius: 7;
-  -moz-border-radius: 7;
   border-radius: 7px;
-  border-width: 0;
-  color: #f2f2f2;
+  border: none;
   background: #312f3b;
-  height:30px;
-  padding:0 20px;
-  text-decoration: none;
-  transition: all ease 0.25s
+  color: #f2f2f2;
+  height: 30px;
+  padding: 0 12px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
 }
 
 .btn:hover {
-  background:rgba(255, 255, 255, 0.15);
-  text-decoration: none;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Context menu container */
+#context-menu {
+  position: fixed;
+  background: #312f3b;
+  border-radius: 7px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  padding: 5px 0;
+  z-index: 10000;
+  min-width: 100px;
+}
+
+/* Context menu buttons */
+#context-menu .btn {
+  display: block;
+  width: 100%;
+  margin: 5px 0;
+  box-sizing: border-box;
+  text-align: left;
+  background: none;
+  border: none;
+  color: #f2f2f2;
+  padding: 8px;
+  transition: background-color 0.2s ease;
+}
+
+#context-menu .btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Tooltip styling */
+#icon-tooltip {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  white-space: nowrap;
+  z-index: 10001;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  max-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
