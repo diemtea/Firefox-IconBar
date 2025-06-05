@@ -2,7 +2,7 @@
 
 ![IconBar logo](https://addons.mozilla.org/user-media/addon_icons/2805/2805366-64.png?modified=07715e9d)
 
-[IconBar](https://addons.mozilla.org/en-US/firefox/addon/iconbar/) is a Firefox Extension for displaying bookmark icons in a sidebar that seamlessly matches your browser's theme. You can also upload your own icons to customize it further.
+[IconBar](https://addons.mozilla.org/firefox/addon/iconbar/) is a Firefox Extension for displaying bookmark icons in a sidebar that seamlessly matches your browser's theme. You can also upload your own icons to customize it further.
 
 The extension looks for bookmarks in the folder: `Other Bookmarks > IconBar`.
 
@@ -18,7 +18,7 @@ The extension looks for bookmarks in the folder: `Other Bookmarks > IconBar`.
 * **Custom Context Menu:** Right-click any icon to quickly Upload or Reset its image.
 * **Tooltips:** Hover an icon for 500 ms to see its bookmark title in a styled tooltip.
 
-[Get this Extension for 🦊 Firefox](https://addons.mozilla.org/en-US/firefox/addon/iconbar/)
+[Get this Extension for 🦊 Firefox](https://addons.mozilla.org/firefox/addon/iconbar/)
 
 > **Note:** To use the thin sidebar width, edit your *userChrome.css* file.
 
